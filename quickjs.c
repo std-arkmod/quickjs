@@ -36984,6 +36984,7 @@ static void bc_reader_free(BCReaderState *s)
 JSValue JS_ReadObject(JSContext *ctx, const uint8_t *buf, size_t buf_len,
                        int flags)
 {
+    printf("JS_ReadObject: buf_len=%zu flags=0x%x\n", buf_len, flags);
     BCReaderState ss, *s = &ss;
     JSValue obj;
 
