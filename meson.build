@@ -134,3 +134,12 @@ pkg.generate(quickjs,
 )
 
 meson.override_dependency('quickjs', quickjs_dep)
+
+qjs = executable('qjs', 'qjs.c', 'repl.c', 'qjscalc.c',
+  dependencies: quickjs_dep,
+  install: true,
+)
+qjsc = executable('qjsc', 'qjsc.c',
+  dependencies: quickjs_dep,
+  install: true,
+)
