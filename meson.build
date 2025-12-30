@@ -1,5 +1,5 @@
 project('quickjs', 'c',
-  version: '2024-01-13-frida',
+  version: '2024-01-13-std',
 )
 
 cc = meson.get_compiler('c')
